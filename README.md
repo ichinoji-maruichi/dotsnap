@@ -91,7 +91,6 @@ npm run build   単一HTML版を再生成
 - `app.js`: UI、Web Worker、履歴、アニメーション、入出力。
 - `zip.js`: 外部依存のないZIP出力。
 - `styles.css`: レスポンシブUI。
-- `dotsnap-original.html`: 改修前の版をそのまま保存したもの。この旧版には外部フォント参照があります。
 
 処理はWeb Workerで実行し、設定が変わったら古い処理を中断します。Workerを作成できない環境ではメインスレッドで実行します。
 

@@ -4,7 +4,7 @@ require('../engine.js');require('../processor.js');
 const engine=DotSnapProcessor(DotSnapPrimitives);
 const geometry=r=>({cols:r.cols,rows:r.rows,frames:r.variants[0].frames.map(f=>({cell:f.cell,bbox:f.bbox,pitch:f.pitch,x:f.originX,y:f.originY}))});
 test('test.png keeps its 15 frames and scale across the whole key tolerance range',()=>{
- const image=decode(fs.readFileSync(path.join(__dirname,'../test.png')));
+ const image=decode(fs.readFileSync(path.join(__dirname,'fixtures/test.png')));
  for(const split of ['auto','uniform']){
   let reference;
   for(const tolerance of [0,10,36,80,160,300,442]){
