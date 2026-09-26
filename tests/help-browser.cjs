@@ -5,7 +5,7 @@ const path=require('node:path');
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'});
  try{
-  for(const file of ['dotsnap.html','dotsnap-standalone.html']){
+  for(const file of ['dotsnap.html','index.html']){
    const page=await browser.newPage({viewport:{width:1400,height:1000}});
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(pathToFileURL(path.join(__dirname,'..',file)).href);

@@ -2,9 +2,12 @@
 
 AI生成のピクセルイラスト・スプライトシートを、指定サイズと色数のドット絵に整えるブラウザツール。元画像の色と形を参照した自動補修を備えています。
 
+**公開ページ:** https://ichinoji-maruichi.github.io/dotsnap/
+
 ## 開く
 
-- **すぐ使う:** `dotsnap-standalone.html` をブラウザで開く。この1ファイルだけで使えます。
+- **Webで使う:** 上の公開ページを開く。
+- **手元で使う:** `index.html` をブラウザで開く。この1ファイルだけで使えます。
 - **開発用:** `dotsnap.html` を開く。同じフォルダのCSS・JavaScriptが必要です。
 - **ローカルプレビュー:** Node.jsで `npm start` を実行し、http://127.0.0.1:4173 を開く。
 
@@ -83,7 +86,7 @@ AI生成のピクセルイラスト・スプライトシートを、指定サイ
 ```text
 npm start       ローカルプレビュー
 npm test        処理・ZIPのテスト
-npm run build   単一HTML版を再生成
+npm run build   単一HTML版 index.html を再生成
 ```
 
 - `engine.js`: 元の実装から引き継いだピッチ推定と減色の基本処理。
@@ -91,6 +94,8 @@ npm run build   単一HTML版を再生成
 - `app.js`: UI、Web Worker、履歴、アニメーション、入出力。
 - `zip.js`: 外部依存のないZIP出力。
 - `styles.css`: レスポンシブUI。
+- `index.html`: 公開用の単一ファイル版。`dotsnap.html` とCSS・JavaScriptから `npm run build` で生成します。直接編集しないでください。
+- `tests/fixtures/test.png`: テスト用のスプライトシート。
 
 処理はWeb Workerで実行し、設定が変わったら古い処理を中断します。Workerを作成できない環境ではメインスレッドで実行します。
 
@@ -127,3 +132,7 @@ npm run build   単一HTML版を再生成
 変換プレビューの格子は「コマ枠」（出力コマの幅・高さごとの境界）と「ドット格子」（1ドットごとの境界）に分離しました。それぞれ独立してON/OFFでき、同時表示も可能です。倍率では種類を切り替えません。手仕上げは単独コマ表示のため「ドット格子」のみです。
 
 手仕上げの最大倍率は6400％です。＋（＝）/ −で倍率を一段ずつ切り替え、Ctrl＋ホイールでも拡縮できます。カーソル横に現在の道具（ペン・消しゴム・スポイト）を表示し、Shift/Altでの一時切替も反映します。ツール欄の「戻す／やり直す」に加え、Ctrl+Z、Ctrl+Shift+ZまたはCtrl+Yで履歴操作できます。MacではCtrlの代わりにCommandを使えます。文字や数値の入力中は入力欄の通常操作を優先します。
+
+## ライセンス
+
+MIT License — © 2026 マルイチソフト (Maruichi Soft)
