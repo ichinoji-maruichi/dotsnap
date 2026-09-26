@@ -60,6 +60,7 @@ dialog.innerHTML=`
 <dt>手仕上げで描けない</dt><dd>「仕上がり」タブと「手修正を反映」がONか確認し、パレットから色を選びます。比較表示はドラッグによる閲覧用です。</dd>
 <dt>画像を読み込めない・処理が重い</dt><dd>入力はPNG / JPEG / WebPなどブラウザで読める画像で、1600万画素まで。出力は合計800万画素・シートの一辺16384pxまでです。画像を小さくするか、出力サイズやコマ数を減らしてください。</dd>
 </dl></section>
+<p class="help-foot">dotsnap ／ <a href="https://ichinoji-maruichi.github.io/" target="_blank" rel="noopener">マルイチソフト</a> — ほかのツールもこちらで公開しています。</p>
 </div>`;
 document.body.append(dialog);
 opener.addEventListener('click',()=>dialog.showModal());
