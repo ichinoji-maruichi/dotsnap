@@ -1,0 +1,16 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# 作業ファイル(ユーザーの画像を含むため)
+*.dotsnap
+
+# 書き出し結果
+*.zip
+
+# OS / エディタ
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
