@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>dotsnap — ドットを、使えるかたちに。</title><style>:root{color-scheme:light;--bg:#f6f5f0;--paper:#fffefa;--ink:#273a36;--muted:#7b8276;--line:#dfdfd3;--accent:#df6b35;--green:#386b50;--soft:#edf1e5;font-family:"Yu Gothic UI","Meiryo",system-ui,sans-serif}
+<head><meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-NGT91CXKBG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGT91CXKBG');</script><meta name="viewport" content="width=device-width,initial-scale=1"><title>dotsnap — ドットを、使えるかたちに。</title><style>:root{color-scheme:light;--bg:#f6f5f0;--paper:#fffefa;--ink:#273a36;--muted:#7b8276;--line:#dfdfd3;--accent:#df6b35;--green:#386b50;--soft:#edf1e5;font-family:"Yu Gothic UI","Meiryo",system-ui,sans-serif}
 .brand-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.help-button{flex:none;width:34px;height:34px;padding:5px;border-radius:50%;color:var(--green)}
 #helpDialog{width:min(800px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);box-shadow:0 24px 90px #142c3540;overflow:hidden}
 #helpDialog[open]{display:flex;flex-direction:column}#helpDialog::backdrop{background:#1b302f80}
@@ -88,7 +88,7 @@
 <label class="stack">残したい色<textarea data-p="lockedPalette" placeholder="#ffcc99 #304c8c" rows="2"></textarea></label><p class="micro">自動パレットに必ず含める色。パレットの色をクリックして追加できます。</p>
 <label class="field">縁線<select data-p="outline"><option value="none">追加しない</option><option value="inner">内側に1ドット</option><option value="outer">外側に1ドット</option></select><input aria-label="縁線色" data-p="outlineColor" type="color"></label>
 <details><summary>固定パレット</summary><label class="stack">この色だけを使用<textarea data-p="fixedPalette" rows="3" placeholder="#202330 #f7efe1 #e9a548"></textarea></label><p class="micro">入力時は最大色数より優先。縁線もこのパレット内の近い色に合わせます。</p></details></section>
-</div><div class="privacy">▣ 画像・設定は外部に送信しません。<br>保存した作業ファイルから再開できます。</div>
+</div><div class="privacy">▣ 画像は外部に送信されません。<br>アクセス解析にGoogleアナリティクスを使用しています。<br>保存した作業ファイルから再開できます。</div>
 </aside><main>
 <section class="canvas-panel">
 <div class="canvas-toolbar"><div class="tabs" role="tablist" aria-label="表示"><button class="active" data-view="result" role="tab" aria-selected="true">仕上がり</button><button data-view="compare" role="tab" aria-selected="false">補修前 / 後</button><button data-view="source" role="tab" aria-selected="false">元画像</button></div><div class="view-tools"><label class="conversion-overlay"><input id="grid" type="checkbox"> コマ枠</label><label class="conversion-overlay"><input id="dotGrid" type="checkbox"> ドット格子</label><label class="conversion-overlay"><input id="changes" type="checkbox"> 補修箇所</label><label class="conversion-overlay"><input id="blinkChanges" type="checkbox"> 点滅</label><select id="zoom" aria-label="表示倍率"><option value="1">100%</option><option value="2">200%</option><option value="4" selected>400%</option><option value="8">800%</option><option value="12">1200%</option><option value="16" data-manual-zoom>1600%</option><option value="24" data-manual-zoom>2400%</option><option value="32" data-manual-zoom>3200%</option><option value="48" data-manual-zoom>4800%</option><option value="64" data-manual-zoom>6400%</option></select></div></div>
@@ -792,7 +792,7 @@ dialog.innerHTML=`
 <header class="help-header"><div><span class="eyebrow">DOTSNAP GUIDE</span><h1 id="helpTitle">ヘルプ・マニュアル</h1></div><button type="button" id="closeHelp" aria-label="ヘルプを閉じる" autofocus>閉じる <span aria-hidden="true">×</span></button></header>
 <div class="help-body">
 <p class="help-lead">画像を整えて、1ドットずつ仕上げる。</p>
-<p>dotsnapは、イラストやスプライトシートを指定サイズ・色数のドット絵に整えるツールです。画像と設定はブラウザ内で処理し、外部に送信しません。</p>
+<p>dotsnapは、イラストやスプライトシートを指定サイズ・色数のドット絵に整えるツールです。画像はブラウザ内で処理し、外部には送信されません。利用状況を把握するため、Googleアナリティクスでアクセス情報（閲覧したページ、ブラウザの種類など）を収集しています。読み込んだ画像や変換設定は送信しません。</p>
 <nav class="help-nav" aria-label="マニュアルの目次"><a href="#help-start">はじめに</a><a href="#help-settings">変換設定</a><a href="#help-preview">確認・比較</a><a href="#help-edit">手仕上げ</a><a href="#help-save">保存・出力</a><a href="#help-keys">キー操作</a><a href="#help-trouble">困ったとき</a></nav>
 <section id="help-start"><h2>まずは、この5ステップ</h2><ol>
 <li><strong>画像を開く。</strong>「画像を開く」、ドラッグ＆ドロップ、Ctrl+Vの貼り付けに対応。「デモ」でも試せます。</li>

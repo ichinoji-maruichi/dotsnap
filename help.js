@@ -16,7 +16,7 @@ dialog.innerHTML=`
 <header class="help-header"><div><span class="eyebrow">DOTSNAP GUIDE</span><h1 id="helpTitle">ヘルプ・マニュアル</h1></div><button type="button" id="closeHelp" aria-label="ヘルプを閉じる" autofocus>閉じる <span aria-hidden="true">×</span></button></header>
 <div class="help-body">
 <p class="help-lead">画像を整えて、1ドットずつ仕上げる。</p>
-<p>dotsnapは、イラストやスプライトシートを指定サイズ・色数のドット絵に整えるツールです。画像と設定はブラウザ内で処理し、外部に送信しません。</p>
+<p>dotsnapは、イラストやスプライトシートを指定サイズ・色数のドット絵に整えるツールです。画像はブラウザ内で処理し、外部には送信されません。利用状況を把握するため、Googleアナリティクスでアクセス情報（閲覧したページ、ブラウザの種類など）を収集しています。読み込んだ画像や変換設定は送信しません。</p>
 <nav class="help-nav" aria-label="マニュアルの目次"><a href="#help-start">はじめに</a><a href="#help-settings">変換設定</a><a href="#help-preview">確認・比較</a><a href="#help-edit">手仕上げ</a><a href="#help-save">保存・出力</a><a href="#help-keys">キー操作</a><a href="#help-trouble">困ったとき</a></nav>
 <section id="help-start"><h2>まずは、この5ステップ</h2><ol>
 <li><strong>画像を開く。</strong>「画像を開く」、ドラッグ＆ドロップ、Ctrl+Vの貼り付けに対応。「デモ」でも試せます。</li>
